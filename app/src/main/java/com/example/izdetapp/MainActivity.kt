@@ -10,4 +10,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // SDU students
+    /*
+    * Makhmud, Omar, KNB, Magzhan
+    * */
 }
