@@ -7,11 +7,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar?.hide()
     }
 
-    // BEST SDU students :
-    /*
-    * Makhmud, Omar, KNB, Magzhan
-    * */
-    // Come on
 }
