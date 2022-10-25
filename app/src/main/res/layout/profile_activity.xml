@@ -55,4 +55,13 @@
             android:textSize="19sp" />
     </RadioGroup>
 
+    <EditText
+        android:id="@+id/user_description"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/options"
+        android:hint="write some descriptions"
+        android:layout_marginLeft="25dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
