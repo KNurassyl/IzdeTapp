@@ -13,4 +13,5 @@ class MainActivity : AppCompatActivity() {
     /*
     * Makhmud, Omar, KNB, Magzhan
     * */
+    // Come on
 }
