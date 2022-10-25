@@ -9,8 +9,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    // SDU students
+    // BEST SDU students :
     /*
     * Makhmud, Omar, KNB, Magzhan
     * */
+    // Come on
 }
