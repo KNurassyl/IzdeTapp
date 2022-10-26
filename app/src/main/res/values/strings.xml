@@ -5,4 +5,10 @@
     <string name="messages">Messages</string>
     <string name="about">About</string>
     <string name="log_out">Log Out</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+  
+    
+    
 </resources>
