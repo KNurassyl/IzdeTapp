@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">IzdeTapp</string>
     <string name="add">+Add</string>
+    <string name="do_you_want">Do you want to add something? Click add button</string>
+    <string name="lost_and_found">Lost and Found</string>
+    <string name="sell_or_buy">Sell or Buy</string>
+    <string name="apartment">Apartment</string>
+    <string name="write_some_descriptions">write some descriptions</string>
+    <string name="upload_image">Upload</string>
 </resources>
