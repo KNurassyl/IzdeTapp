@@ -18,8 +18,9 @@
 
     <TextView
         android:id="@+id/do_you_want"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button_for_addition_content"
@@ -57,11 +58,25 @@
 
     <EditText
         android:id="@+id/user_description"
-        android:layout_width="150sp"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/options"
         android:hint="write some descriptions"
-        android:layout_marginLeft="25dp" />
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="35dp"/>
+
+    <Button
+        android:id="@+id/upload_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/user_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/options"
+        android:text="Upload"
+        android:layout_marginTop="45dp"
+        android:textSize="19sp" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
