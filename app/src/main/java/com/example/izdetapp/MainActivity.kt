@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity() {
 
         val navigationView = findViewById<NavigationView>(R.id.navView)
         navigationView.itemIconTintList = null
+
+
     }
 
 }
