@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/lost_found"
+        android:layout_width="213dp"
+        android:layout_height="139dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/lost_found" />
+
+    <ImageView
+        android:id="@+id/sell_buy"
+        android:layout_width="218dp"
+        android:layout_height="126dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="@+id/lost_found"
+        app:layout_constraintTop_toBottomOf="@+id/lost_found"
+        tools:srcCompat="@drawable/sell_buy" />
+
+    <ImageView
+        android:id="@+id/appa"
+        android:layout_width="216dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="@+id/sell_buy"
+        app:layout_constraintTop_toBottomOf="@+id/sell_buy"
+        tools:srcCompat="@drawable/appartment" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
