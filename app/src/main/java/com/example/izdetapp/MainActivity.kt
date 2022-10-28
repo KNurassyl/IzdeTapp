@@ -11,17 +11,16 @@ import com.google.android.material.navigation.NavigationView
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-<<<<<<< HEAD
         setContentView(R.layout.profile_activity)
-=======
         setContentView(R.layout.activity_main)
+
         supportActionBar?.hide()
 
-        val drawerLayout = findViewById<DrawerLayout>(R.id.drawerlayout)
-        findViewById<View>(R.id.menuImg).setOnClickListener { drawerLayout.openDrawer(GravityCompat.START) }
-
-        val navigationView = findViewById<NavigationView>(R.id.navView)
-        navigationView.itemIconTintList = null
+//        val drawerLayout = findViewById<DrawerLayout>(R.id.drawerlayout)
+//        findViewById<View>(R.id.menuImg).setOnClickListener { drawerLayout.openDrawer(GravityCompat.START) }
+//
+//        val navigationView = findViewById<NavigationView>(R.id.navView)
+//        navigationView.itemIconTintList = null
 
 //        val lost_found : ImageView = findViewById(R.id.lost_found)
 //        val sell_buy : ImageView = findViewById(R.id.sell_buy)
@@ -32,7 +31,6 @@ class MainActivity : AppCompatActivity() {
 //        appartment.setImageResource(R.drawable.appartment)
 
 
->>>>>>> dff41f55261055c0650b992289ad0556a2c4042b
     }
 
 }
