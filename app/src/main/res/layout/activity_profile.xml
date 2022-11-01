@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/upper_textview_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/profile_and_settings"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:id="@+id/profile_logo"
+        android:layout_width="166dp"
+        android:layout_height="147dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upper_textview_profile"
+        app:srcCompat="@drawable/profile_logo"
+        android:contentDescription="@string/profile_logo_description" />
+
+    <TextView
+        android:id="@+id/name_surname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/profile_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/name_surname"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.85"
+        app:layout_constraintTop_toBottomOf="@id/name_surname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true" >
+
+        <LinearLayout
+            android:id="@+id/container_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="15dp" >
+
+            <LinearLayout
+                android:id="@+id/my_posts_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:minHeight="48dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:background="@drawable/profile_click_background" >
+
+                <ImageView
+                    android:id="@+id/my_posts_icon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="30dp"
+                    android:contentDescription="@string/my_posts_icon_profile"
+                    app:srcCompat="@drawable/my_posts" />
+
+                <TextView
+                    android:id="@+id/my_posts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:text="@string/my_posts"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/change_password_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:minHeight="48dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:background="@drawable/profile_click_background" >
+
+                <ImageView
+                    android:id="@+id/password_icon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="30dp"
+                    android:contentDescription="@string/password_icon_profile"
+                    app:srcCompat="@drawable/password" />
+
+                <TextView
+                    android:id="@+id/change_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:text="@string/change_password_profile"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/basket_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:minHeight="48dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:background="@drawable/profile_click_background" >
+
+                <ImageView
+                    android:id="@+id/basket_icon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="30dp"
+                    android:contentDescription="@string/basket_icon_profile"
+                    app:srcCompat="@drawable/basket" />
+
+                <TextView
+                    android:id="@+id/basket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:text="@string/basket_profile_page"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/about_us_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:minHeight="48dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:background="@drawable/profile_click_background" >
+
+                <ImageView
+                    android:id="@+id/about_us_icon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="30dp"
+                    android:contentDescription="@string/about_us_icon_profile_description"
+                    app:srcCompat="@drawable/about_us" />
+
+                <TextView
+                    android:id="@+id/about_us"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:text="@string/about_us_profile"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

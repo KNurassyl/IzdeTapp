@@ -6,12 +6,6 @@ import android.os.Bundle
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        setContentView(R.layout.profile_activity)
+        setContentView(R.layout.activity_profile)
     }
-    /*
-    I am coding here and someone is coding here
-    No we need to merge them
-     */
-
 }
