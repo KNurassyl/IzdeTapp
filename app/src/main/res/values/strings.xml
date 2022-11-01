@@ -11,4 +11,8 @@
      <string name="password_icon_profile">password icon</string>
      <string name="change_password_profile">Change password</string>
      <string name="my_posts_icon_profile">my posts icon</string>
-</resources>
+      <string name="home">Home</string>
+      <string name="sh_basket">Basket</string>
+      <string name="message">Message</string>
+      <string name="profile">Profile</string>
+ </resources>
