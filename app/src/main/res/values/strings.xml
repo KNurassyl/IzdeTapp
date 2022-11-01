@@ -1,15 +1,14 @@
  <resources>
-    <string name="app_name">IzdeTapp</string>
-    <string name="add">+Add</string>
-    <string name="do_you_want">Do you want to add something? Click add button</string>
-    <string name="lost_and_found">Lost and Found</string>
-    <string name="sell_or_buy">Sell or Buy</string>
-    <string name="apartment">Apartment</string>
-    <string name="write_some_descriptions">write some descriptions</string>
-    <string name="upload_image">Upload</string>
-    <string name="profile">Profile</string>
-    <string name="services">Services</string>
-    <string name="messages">Messages</string>
-    <string name="about">About</string>
-    <string name="log_out">Log Out</string>
+     <string name="app_name">IzdeTapp</string>
+     <string name="profile_and_settings">Profile and settings</string>
+     <string name="profile_logo_description">profile logo description</string>
+     <string name="name_surname">UserName UserSurname</string>
+     <string name="my_posts">My posts</string>
+     <string name="basket_profile_page">Basket</string>
+     <string name="basket_icon_profile">basket icon</string>
+     <string name="about_us_icon_profile_description">about us icon</string>
+     <string name="about_us_profile">About us</string>
+     <string name="password_icon_profile">password icon</string>
+     <string name="change_password_profile">Change password</string>
+     <string name="my_posts_icon_profile">my posts icon</string>
 </resources>
