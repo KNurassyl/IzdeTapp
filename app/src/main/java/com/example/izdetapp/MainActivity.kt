@@ -15,17 +15,17 @@ import com.google.android.material.navigation.NavigationView
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.magzhan)
-        /* supportActionBar?.hide()
+        setContentView(R.layout.activity_main)
+             supportActionBar?.hide()
 
         val drawerLayout = findViewById<DrawerLayout>(R.id.drawerlayout)
         findViewById<View>(R.id.menuImg).setOnClickListener { drawerLayout.openDrawer(GravityCompat.START) }
 
         val navigationView = findViewById<NavigationView>(R.id.navView)
-        navigationView.itemIconTintList = null */
+        navigationView.itemIconTintList = null
 
 
-        val btnLogin: Button = findViewById(R.id.btnLogin)
+      /*  val btnLogin: Button = findViewById(R.id.btnLogin)
         val edUsername: EditText = findViewById(R.id.edUsername)
         val edPassword: EditText = findViewById(R.id.edPassword)
         val tvRegister: TextView = findViewById(R.id.tvRegister)
@@ -41,11 +41,11 @@ class MainActivity : AppCompatActivity() {
         }
         tvRegister.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
+            startActivity(intent) */
 
         }
     }
-}
+
 
     
 

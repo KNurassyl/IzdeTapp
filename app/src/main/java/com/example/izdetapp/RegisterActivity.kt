@@ -27,11 +27,11 @@ class RegisterActivity : AppCompatActivity() {
 
         btnRegister.setOnClickListener{
 
-            if(editUsername.text.trim().isNotEmpty() || editEmail.text.trim().isNotEmpty() || editCPassword.text.trim().isNotEmpty() || editPassword.text.trim().isNotEmpty()){
-                Toast.makeText(this, "Input Provided", Toast.LENGTH_LONG).show()
+            if(editUsername.text.trim().isNotEmpty() && editEmail.text.trim().isNotEmpty() && editCPassword.text.trim().isNotEmpty() && editPassword.text.trim().isNotEmpty()){
+                Toast.makeText(this, "Input provided", Toast.LENGTH_LONG).show()
             }
             else{
-                Toast.makeText(this, "Input Required", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Input required", Toast.LENGTH_LONG).show()
             }
 
         }
