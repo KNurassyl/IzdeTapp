@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.fragmentContainerView5)
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.homeFragment, R.id.basketFragment, R.id.createFragment,  R.id.messageFragment, R.id.pofileFragment
+                R.id.homeFragment, R.id.basketFragment, R.id.createFragment,  R.id.messageFragment, R.id.profileFragment
             )
         )
 

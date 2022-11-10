@@ -10,10 +10,10 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
-        android:id="@+id/pofileFragment"
-        android:name="com.example.izdetapp.PofileFragment"
-        android:label="fragment_pofile"
-        tools:layout="@layout/fragment_pofile" />
+        android:id="@+id/profileFragment"
+        android:name="com.example.izdetapp.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/basketFragment"
         android:name="com.example.izdetapp.BasketFragment"

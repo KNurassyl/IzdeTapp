@@ -45,5 +45,4 @@
         app:navGraph="@navigation/my_nav" />
 
 
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
