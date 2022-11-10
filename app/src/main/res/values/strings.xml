@@ -1,18 +1,21 @@
- <resources>
-     <string name="app_name">IzdeTapp</string>
-     <string name="profile_and_settings">Profile and settings</string>
-     <string name="profile_logo_description">profile logo description</string>
-     <string name="name_surname">UserName UserSurname</string>
-     <string name="my_posts">My posts</string>
-     <string name="basket_profile_page">Basket</string>
-     <string name="basket_icon_profile">basket icon</string>
-     <string name="about_us_icon_profile_description">about us icon</string>
-     <string name="about_us_profile">About us</string>
-     <string name="password_icon_profile">password icon</string>
-     <string name="change_password_profile">Change password</string>
-     <string name="my_posts_icon_profile">my posts icon</string>
-      <string name="home">Home</string>
-      <string name="sh_basket">Basket</string>
-      <string name="message">Message</string>
-      <string name="profile">Profile</string>
- </resources>
+<resources>
+    <string name="app_name">IzdeTapp</string>
+    <string name="profile_and_settings">Profile and settings</string>
+    <string name="profile_logo_description">profile logo description</string>
+    <string name="name_surname">UserName UserSurname</string>
+    <string name="my_posts">My posts</string>
+    <string name="basket_profile_page">Basket</string>
+    <string name="basket_icon_profile">basket icon</string>
+    <string name="about_us_icon_profile_description">about us icon</string>
+    <string name="about_us_profile">About us</string>
+    <string name="password_icon_profile">password icon</string>
+    <string name="change_password_profile">Change password</string>
+    <string name="my_posts_icon_profile">my posts icon</string>
+    <string name="home">Home</string>
+    <string name="sh_basket">Basket</string>
+    <string name="message">Message</string>
+    <string name="profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_fragment">Home Fragment</string>
+</resources>
