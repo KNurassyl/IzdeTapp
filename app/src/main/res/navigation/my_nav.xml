@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.izdetapp.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/pofileFragment"
+        android:name="com.example.izdetapp.PofileFragment"
+        android:label="fragment_pofile"
+        tools:layout="@layout/fragment_pofile" />
+    <fragment
+        android:id="@+id/basketFragment"
+        android:name="com.example.izdetapp.BasketFragment"
+        android:label="fragment_basket"
+        tools:layout="@layout/fragment_basket" />
+    <fragment
+        android:id="@+id/createFragment"
+        android:name="com.example.izdetapp.CreateFragment"
+        android:label="fragment_create"
+        tools:layout="@layout/fragment_create" />
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="com.example.izdetapp.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" />
+</navigation>
