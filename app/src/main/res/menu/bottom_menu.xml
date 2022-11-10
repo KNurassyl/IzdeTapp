@@ -11,11 +11,12 @@
         android:title="@string/sh_basket"/>
 
     <item
-        android:id="@+id/placeholder"
-        android:title=""/>
+        android:id="@+id/post"
+        android:icon="@drawable/add"
+        android:title="@string/add"/>
 
     <item
-        android:id="@+id/message"
+        android:id="@+id/notifications"
         android:icon="@drawable/message"
         android:title="@string/message"/>
 
