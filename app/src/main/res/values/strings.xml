@@ -4,6 +4,10 @@
     <string name="profile_logo_description">profile logo description</string>
     <string name="name_surname">UserName UserSurname</string>
     <string name="my_posts">My posts</string>
+    <string name="basket_profile_page">Basket</string>
+    <string name="basket_icon_profile">basket icon</string>
+    <string name="about_us_icon_profile_description">about us icon</string>
+    <string name="about_us_profile">About us</string>
     <string name="gmail">Gmail</string>
     <string name="gmail_description">gmail icon profile</string>
     <string name="name_and_surname_description">name and surname description</string>
