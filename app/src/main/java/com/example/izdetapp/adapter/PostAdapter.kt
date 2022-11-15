@@ -1,4 +1,4 @@
-package com.example.recylerviewyt
+package com.example.izdetapp.adapter
 
 import android.view.LayoutInflater
 import android.view.View

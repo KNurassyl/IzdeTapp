@@ -1,4 +1,4 @@
-package com.example.homepage.model
+package com.example.izdetapp.model
 
 class PostModel (
 

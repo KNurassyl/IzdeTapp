@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment">
 
     <TextView
         android:id="@+id/upper_textview_profile"
@@ -141,15 +143,15 @@
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_marginStart="30dp"
-                    android:contentDescription="@string/basket_icon_profile"
-                    app:srcCompat="@drawable/basket" />
+                    android:contentDescription="@string/gmail_description"
+                    app:srcCompat="@drawable/email_profile" />
 
                 <TextView
                     android:id="@+id/basket"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="35dp"
-                    android:text="@string/basket_profile_page"
+                    android:text="@string/gmail"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -175,19 +177,18 @@
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_marginStart="30dp"
-                    android:contentDescription="@string/about_us_icon_profile_description"
-                    app:srcCompat="@drawable/about_us" />
+                    android:contentDescription="@string/name_and_surname_description"
+                    app:srcCompat="@drawable/logout_profile" />
 
                 <TextView
                     android:id="@+id/about_us"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="35dp"
-                    android:text="@string/about_us_profile"
+                    android:text="@string/logout_string"
                     android:textSize="20sp" />
             </LinearLayout>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
