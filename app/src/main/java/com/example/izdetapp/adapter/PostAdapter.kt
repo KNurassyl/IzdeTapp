@@ -3,38 +3,36 @@ package com.example.izdetapp.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.izdetapp.model.PostModel
 import com.example.izdetapp.R
-import kotlinx.android.synthetic.main.item_post_layout.view.*
+import com.example.izdetapp.adapter.Posts
+import com.google.android.material.imageview.ShapeableImageView
+import com.google.android.material.shape.Shapeable
+import java.util.concurrent.ThreadLocalRandom
 
-class PostAdapter: RecyclerView.Adapter<PostAdapter.PostViewHolder>(){
-
-    private var postList = emptyList<PostModel>()
-
-    class PostViewHolder(view : View):RecyclerView.ViewHolder(view)
+class PostAdapter(private val postList : java.util.ArrayList<Posts>) : RecyclerView.Adapter<PostAdapter.PostViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
-        var view = LayoutInflater.from(parent.context).inflate(R.layout.item_post_layout, parent, false)
-        return PostViewHolder(view)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_post_layout, parent, false)
+        return PostViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
-        holder.itemView.image_profile.setImageResource(postList[position].image_profile)
-        holder.itemView.username.text = postList[position].username
-        holder.itemView.content.text = postList[position].content
-        holder.itemView.image_content.setImageResource(postList[position].image_content)
-//        holder.itemView.image_content. = postList[position].content
-//        holder.itemView.like.drawable() = postList[position].like
-//        holder.itemView.message.drawable() = postList[position].message
+        val curItem = postList[position]
+
+        holder.postImage.setImageResource(curItem.PostImage)
+        holder.tvHeading.text = curItem.heading
     }
+
 
     override fun getItemCount(): Int {
         return postList.size
     }
 
-    fun setList(list : List<PostModel>){
-        postList = list
-        notifyDataSetChanged()
+    class PostViewHolder(itemView : View): RecyclerView.ViewHolder(itemView)
+    {
+        val postImage : ShapeableImageView = itemView.findViewById(R.id.image_content)
+        val tvHeading : TextView = itemView.findViewById(R.id.content)
     }
 }
