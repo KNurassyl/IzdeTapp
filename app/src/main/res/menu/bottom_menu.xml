@@ -11,16 +11,12 @@
         android:title="@string/sh_basket"/>
 
     <item
-        android:id="@+id/createFragment"
-        android:title=""/>
-
-    <item
         android:id="@+id/messageFragment"
         android:icon="@drawable/message"
         android:title="@string/message"/>
 
     <item
-        android:id="@+id/pofileFragment"
+        android:id="@+id/profileFragment"
         android:icon="@drawable/person"
         android:title="@string/profile"/>
 </menu>
