@@ -29,7 +29,7 @@
         android:contentDescription="@string/profile_logo_description" />
 
     <TextView
-        android:id="@+id/name_surname"
+        android:id="@+id/name_surname_post"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/post_logo"
@@ -38,5 +38,16 @@
         android:text="@string/name_surname"
         android:textSize="20sp"
         android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycle_view_my_posts"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_surname_post"
+        tools:listitem="@layout/item_post_layout"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
