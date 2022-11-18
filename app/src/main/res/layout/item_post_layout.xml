@@ -56,13 +56,13 @@
                     android:textColor="@color/design_default_color_primary_dark"
                     android:text="Text Content"
                     />
-                <ImageView
+                <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/image_content"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
                     android:layout_margin="10dp"
                     android:src="@mipmap/ic_launcher"
-                    />
+                    android:contentDescription="TODO" />
 
             </LinearLayout>
 
