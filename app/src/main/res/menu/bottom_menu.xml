@@ -19,4 +19,6 @@
         android:id="@+id/profileFragment"
         android:icon="@drawable/person"
         android:title="@string/profile"/>
+
+    <item android:id="@+id/logout" android:title="Log out"/>
 </menu>
