@@ -11,6 +11,11 @@
         android:title="@string/sh_basket"/>
 
     <item
+        android:id="@+id/createFragment"
+        android:icon="@drawable/add"
+        android:title="@string/add"/>
+
+    <item
         android:id="@+id/messageFragment"
         android:icon="@drawable/message"
         android:title="@string/message"/>
