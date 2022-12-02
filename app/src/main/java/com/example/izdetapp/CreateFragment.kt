@@ -18,17 +18,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-
-
-/**
- * A simple [Fragment] subclass.
- * Use the [CreateFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class CreateFragment : Fragment() {
-    // TODO: Rename and change types of parameters
     private lateinit var binding: FragmentCreateBinding
     private var imageReference = Firebase.storage.reference
     private var currentFile: Uri? = null
