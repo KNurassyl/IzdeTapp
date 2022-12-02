@@ -16,40 +16,32 @@ import com.google.firebase.storage.ktx.storage
 class CreateViewModel : ViewModel() {
     private val imgReference = Firebase.storage.reference
 
-    private val _imageReference = MutableLiveData(imgReference)
-    val imageReference: LiveData<StorageReference>
-        get() = _imageReference
     private val _currentFile = MutableLiveData<Uri>()
     val currentFile: LiveData<Uri>
         get() = _currentFile
 
-    /* private val imageLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-            result ->
-        if(result.resultCode == AppCompatActivity.RESULT_OK) {
-            result?.data?.data?.let {
-                currentFile = it
-                val mImageView: ImageView = requireActivity().findViewById(R.id.image_view)
-                mImageView.setImageURI(it)
-            }
-        }
-        else {
-            Toast.makeText(activity, "Canceled", Toast.LENGTH_SHORT).show()
-        }
-    }
+    private val _isUploaded = MutableLiveData<Boolean>()
+    val isUploaded: LiveData<Boolean>
+        get() = _isUploaded
 
-    fun uploadImageToStorage(filename: String) {
+
+    fun onClickButtonUpload(filename: String) {
         try {
-            currentFile?.let {
+            currentFile.value?.let {
                 imgReference.child("images/$filename").putFile(it).addOnSuccessListener {
-                    Toast.makeText(activity, "Upload successful", Toast.LENGTH_SHORT).show()
-                    binding.progressBar.progress = 1
+                    _isUploaded.value = true
                 } .addOnFailureListener {
-                    Toast.makeText(activity, "Error on upload", Toast.LENGTH_SHORT).show()
+                    _isUploaded.value = false
                 }
             }
         } catch (e : Exception) {
-            Toast.makeText(activity, e.toString(), Toast.LENGTH_SHORT).show()
+            _isUploaded.value = false
         }
-    } */
+    }
+
+    fun onImageResult(uri: Uri) {
+        _currentFile.value = uri
+    }
+
 
 }

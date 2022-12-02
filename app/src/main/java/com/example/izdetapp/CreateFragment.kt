@@ -20,21 +20,15 @@ import com.google.firebase.storage.ktx.storage
 
 class CreateFragment : Fragment() {
     private lateinit var binding: FragmentCreateBinding
-    private var imageReference = Firebase.storage.reference
-    private var currentFile: Uri? = null
 
     private val viewModel: CreateViewModel by viewModels()
 
     private val imageLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             result ->
         if(result.resultCode == AppCompatActivity.RESULT_OK) {
-            result?.data?.data?.let {
-                currentFile = it
-                val mImageView: ImageView = requireActivity().findViewById(R.id.image_view)
-                mImageView.setImageURI(it)
-            }
-        }
-        else {
+            val uri = result?.data?.data ?: return@registerForActivityResult
+            viewModel.onImageResult(uri)
+        } else {
             Toast.makeText(activity, "Canceled", Toast.LENGTH_SHORT).show()
         }
     }
@@ -52,29 +46,29 @@ class CreateFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         binding.buttonChooseImage.setOnClickListener {
             Intent(Intent.ACTION_GET_CONTENT).also {
                 it.type = "image/*"
                 imageLauncher.launch(it)
             }
         }
-        binding.buttonUpload.setOnClickListener {
-            uploadImageToStorage("1")
-        }
-    }
 
-    private fun uploadImageToStorage(filename: String) {
-        try {
-            currentFile?.let {
-                imageReference.child("images/$filename").putFile(it).addOnSuccessListener {
+
+        binding.buttonUpload.setOnClickListener {
+            viewModel.onClickButtonUpload("1")
+
+            viewModel.isUploaded.observe(viewLifecycleOwner) { isUploadedLocal ->
+                if (isUploadedLocal) {
                     Toast.makeText(activity, "Upload successful", Toast.LENGTH_SHORT).show()
                     binding.progressBar.progress = 1
-                } .addOnFailureListener {
+                } else {
                     Toast.makeText(activity, "Error on upload", Toast.LENGTH_SHORT).show()
                 }
             }
-        }catch (e : Exception) {
-            Toast.makeText(activity, e.toString(), Toast.LENGTH_SHORT).show()
+            viewModel.currentFile.observe(viewLifecycleOwner) {
+                binding.imageView.setImageURI(it)
+            }
         }
     }
 }
