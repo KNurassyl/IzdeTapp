@@ -1,28 +1,35 @@
 package com.example.izdetapp
 
+
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
+import android.view.Menu
+import android.view.MenuItem
+
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+
 import com.example.izdetapp.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.storage.ktx.storage
+import com.google.firebase.auth.FirebaseAuth
+
+import com.google.firebase.database.*
+
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private lateinit var mAuth:FirebaseAuth
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        mAuth = FirebaseAuth.getInstance()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -30,7 +37,11 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.fragmentContainerView5)
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.homeFragment, R.id.basketFragment, R.id.createFragment,  R.id.messageFragment, R.id.profileFragment
+                R.id.homeFragment,
+                R.id.basketFragment,
+                R.id.createFragment,
+                R.id.messageFragment,
+                R.id.profileFragment
             )
         )
 
@@ -39,4 +50,23 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu,menu)
+        return super.onCreateOptionsMenu(menu)
+
+    }
+
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.logout){
+            mAuth.signOut()
+            val intent = Intent(this@MainActivity, Login::class.java)
+            finish()
+            startActivity(intent)
+            return true
+        }
+        return true
+    }
 }
+

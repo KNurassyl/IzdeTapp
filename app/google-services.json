@@ -1,33 +1,34 @@
 {
   "project_info": {
-    "project_number": "525414734280",
-    "project_id": "izdetapp-cf600",
-    "storage_bucket": "izdetapp-cf600.appspot.com"
+    "project_number": "720988797931",
+    "firebase_url": "https://izdetapp-87a37-default-rtdb.firebaseio.com",
+    "project_id": "izdetapp-87a37",
+    "storage_bucket": "izdetapp-87a37.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:525414734280:android:c6ceca620ed84a1a1d08fd",
+        "mobilesdk_app_id": "1:720988797931:android:692cd8a82ff16e460537ae",
         "android_client_info": {
           "package_name": "com.example.izdetapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "525414734280-5vopoem8rvv4qbq8o9pgufi6v71emdbv.apps.googleusercontent.com",
+          "client_id": "720988797931-oe1ku1952c4tg91gdtle0ji3jqdkfbsq.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCJJ-ZNyTBkzQ31-Db7kFoA6wdEkhMHDD8"
+          "current_key": "AIzaSyC5HfwGfnTlmXbhlR7cKE6p3CTM6okLIZA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "525414734280-5vopoem8rvv4qbq8o9pgufi6v71emdbv.apps.googleusercontent.com",
+              "client_id": "720988797931-oe1ku1952c4tg91gdtle0ji3jqdkfbsq.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
