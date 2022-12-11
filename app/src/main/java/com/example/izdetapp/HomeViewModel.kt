@@ -11,20 +11,8 @@ import androidx.lifecycle.MutableLiveData
 class HomeViewModel : ViewModel() {
     private lateinit var adapter: PostAdapter
     private lateinit var recyclerView: RecyclerView
-//    private val _postsArrayList = MutableLiveData<java.util.ArrayList<Posts>>()
     var postsArrayList: java.util.ArrayList<Posts>? = null
-//        get() = _postsArrayList
 
-    /*private val _imageId = MutableLiveData<Array<Int>>()
-    val imageId: LiveData<Array<Int>>
-        get() = _imageId
-
-    private val _heading = MutableLiveData<Array<String>>()
-    val heading: LiveData<Array<String>>
-        get() = _heading
-    private val _posts = MutableLiveData<Array<String>>()
-    val posts: LiveData<Array<String>>
-        get() = _posts*/
 
     private var imageId: Array<Int>? = null
     private var heading: Array<String>? = null
@@ -77,12 +65,5 @@ class HomeViewModel : ViewModel() {
             val post = Posts(imageId!![i], heading!![i])
             postsArrayList?.add(post)
         }
-
-        /*val layoutManager = LinearLayoutManager(context)
-        recyclerView = view.findViewById(R.id.rv_post)
-        recyclerView.layoutManager = layoutManager
-        recyclerView.setHasFixedSize(true)
-        adapter = PostAdapter(postsArraylist)
-        recyclerView.adapter = adapter*/
     }
 }
