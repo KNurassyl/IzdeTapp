@@ -8,7 +8,7 @@
     tools:context=".Login">
 
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/app_logo"
         android:layout_width="317dp"
         android:layout_height="273dp"
@@ -17,7 +17,7 @@
         android:background="@android:color/transparent"
         android:src="@drawable/primer" />
     
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/edt_email"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -29,7 +29,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/edt_password"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -42,7 +42,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp" />
     
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_Login"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/SignUp"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
