@@ -6,10 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.izdetapp.R
-import com.example.izdetapp.adapter.Posts
 import com.google.android.material.imageview.ShapeableImageView
-import com.google.android.material.shape.Shapeable
-import java.util.concurrent.ThreadLocalRandom
 
 class PostAdapter(private val postList : java.util.ArrayList<Posts>) : RecyclerView.Adapter<PostAdapter.PostViewHolder>(){
 
