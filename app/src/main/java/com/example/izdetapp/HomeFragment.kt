@@ -5,20 +5,25 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.izdetapp.adapter.Posts
 import com.example.izdetapp.adapter.PostAdapter
+import com.example.izdetapp.databinding.FragmentCreateBinding
 
 class HomeFragment : Fragment() {
 
     private lateinit var adapter: PostAdapter
     private lateinit var recyclerView: RecyclerView
     private lateinit var postsArraylist: java.util.ArrayList<Posts>
+    private lateinit var binding: FragmentCreateBinding
 
     private lateinit var imageId: Array<Int>
     private lateinit var heading: Array<String>
     private lateinit var posts: Array<String>
+
+    private val viewModel: HomeViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,16 +39,19 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dataInitialize()
+        viewModel.dataInitialize(requireContext())
+
         val layoutManager = LinearLayoutManager(context)
         recyclerView = view.findViewById(R.id.rv_post)
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
-        adapter = PostAdapter(postsArraylist)
+        adapter = PostAdapter(viewModel.postsArrayList!!)
+
         recyclerView.adapter = adapter
+
     }
 
-    private fun dataInitialize(){
+    /* private fun dataInitialize(){
 
         postsArraylist = arrayListOf<Posts>()
 
@@ -90,5 +98,5 @@ class HomeFragment : Fragment() {
             val post = Posts(imageId[i], heading[i])
             postsArraylist.add(post)
         }
-    }
+    } */
 }

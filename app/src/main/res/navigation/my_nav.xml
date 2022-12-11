@@ -29,9 +29,9 @@
         android:name="com.example.izdetapp.MessageFragment"
         android:label="fragment_message"
         tools:layout="@layout/fragment_message" />
-    <fragment
+    <!--<fragment
         android:id="@+id/myPostsFragment"
         android:name="com.example.izdetapp.MyPostsFragment"
         android:label="fragment_my_posts"
-        tools:layout="@layout/fragment_my_posts" />
+        tools:layout="@layout/fragment_my_posts" />-->
 </navigation>
