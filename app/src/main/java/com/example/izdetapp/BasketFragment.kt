@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.izdetapp.adapter.BasketAdapter
@@ -16,11 +17,12 @@ class BasketFragment : Fragment() {
 
     private lateinit var adapter: BasketAdapter
     private lateinit var recyclerView: RecyclerView
-    private lateinit var postsArraylist: java.util.ArrayList<Baskets>
+    /*private lateinit var postsArraylist: java.util.ArrayList<Baskets>
 
     private lateinit var imageId: Array<Int>
     private lateinit var heading: Array<String>
-    private lateinit var baskets: Array<String>
+    private lateinit var baskets: Array<String>*/
+    private val viewModel: BasketViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,16 +38,16 @@ class BasketFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dataInitialize()
+        viewModel.dataInitialize(requireContext())
         val layoutManager = LinearLayoutManager(context)
         recyclerView = view.findViewById(R.id.rv_post2)
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
-        adapter = BasketAdapter(postsArraylist)
+        adapter = BasketAdapter(viewModel.postsArrayList!!)
         recyclerView.adapter = adapter
     }
 
-    private fun dataInitialize(){
+    /*private fun dataInitialize(){
 
         postsArraylist = arrayListOf<Baskets>()
 
@@ -72,5 +74,5 @@ class BasketFragment : Fragment() {
             val basket = Baskets(imageId[i], heading[i])
             postsArraylist.add(basket)
         }
-    }
+    }*/
 }

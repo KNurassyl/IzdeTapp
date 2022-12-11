@@ -40,7 +40,6 @@ class HomeFragment : Fragment() {
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
         adapter = PostAdapter(viewModel.postsArrayList!!)
-
         recyclerView.adapter = adapter
 
     }

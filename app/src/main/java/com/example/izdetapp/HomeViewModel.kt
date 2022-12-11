@@ -9,8 +9,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 
 class HomeViewModel : ViewModel() {
-    private lateinit var adapter: PostAdapter
-    private lateinit var recyclerView: RecyclerView
+//    private lateinit var adapter: PostAdapter
+//    private lateinit var recyclerView: RecyclerView
     var postsArrayList: java.util.ArrayList<Posts>? = null
 
 
