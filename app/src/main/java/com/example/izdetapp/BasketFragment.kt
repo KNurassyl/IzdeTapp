@@ -17,11 +17,6 @@ class BasketFragment : Fragment() {
 
     private lateinit var adapter: BasketAdapter
     private lateinit var recyclerView: RecyclerView
-    /*private lateinit var postsArraylist: java.util.ArrayList<Baskets>
-
-    private lateinit var imageId: Array<Int>
-    private lateinit var heading: Array<String>
-    private lateinit var baskets: Array<String>*/
     private val viewModel: BasketViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,33 +41,4 @@ class BasketFragment : Fragment() {
         adapter = BasketAdapter(viewModel.postsArrayList!!)
         recyclerView.adapter = adapter
     }
-
-    /*private fun dataInitialize(){
-
-        postsArraylist = arrayListOf<Baskets>()
-
-        imageId = arrayOf(
-            R.drawable.a,
-            R.drawable.b,
-            R.drawable.c,
-
-        )
-
-        heading = arrayOf(
-            getString(R.string.head_1),
-            getString(R.string.head_2),
-            getString(R.string.head_3),
-        )
-
-        baskets = arrayOf(
-            getString(R.string.news_a),
-            getString(R.string.news_b),
-            getString(R.string.news_c),
-           )
-
-        for (i in imageId.indices){
-            val basket = Baskets(imageId[i], heading[i])
-            postsArraylist.add(basket)
-        }
-    }*/
 }
