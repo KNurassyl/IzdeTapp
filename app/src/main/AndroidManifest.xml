@@ -39,6 +39,15 @@
                 android:value="" />
         </activity>
 
+
+        <activity
+            android:name=".Manager"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
         <activity
             android:name=".MessageFragment"
             android:exported="false">

@@ -3,12 +3,11 @@ package com.example.izdetapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.ktx.Firebase
 
 class Login : AppCompatActivity() {
     private lateinit var edtEmail: EditText
@@ -17,6 +16,7 @@ class Login : AppCompatActivity() {
     private lateinit var btnSignUp: Button
 
     private lateinit var mAuth: FirebaseAuth
+    var isExist = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,18 +31,62 @@ class Login : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
 
-        btnSignUp.setOnClickListener{
-            val intent = Intent(this, SignUp::class.java )
+        btnSignUp.setOnClickListener {
+            val intent = Intent(this, SignUp::class.java)
             startActivity(intent)
         }
         btnLogin.setOnClickListener {
             val email = edtEmail.text.toString()
             val password = edtPassword.text.toString()
-
             login(email, password)
+
+
         }
+
+
     }
-    private fun login(email:String, password: String) { 
+
+    private fun login(email: String, password: String) {
+/*
+        val userDetailsRepository = ViewModelProvider(this).get(LoginViewModel::class.java)
+
+        userDetailsRepository.getGetAllData().observe(
+            this
+        ) { t ->
+
+            for (i in t.indices) {
+
+                if (t[i].email?.equals(email)!!) {
+
+                    val intent = Intent(this@Login, MainActivity::class.java)
+                        .putExtra("UserDetials", t[i])
+
+                    startActivity(intent)
+
+                } else {
+                    Toast.makeText(
+                        this@Login,
+                        " Password is Incorrect ",
+                        Toast.LENGTH_LONG
+                    )
+                        .show()
+                }
+                isExist = true
+                break
+            }
+
+
+            if (isExist) {
+
+            } else {
+
+                Toast.makeText(this@Login, " User Not Registered ", Toast.LENGTH_LONG)
+                    .show()
+            }
+        }
+
+
+ */
 
 
         mAuth.signInWithEmailAndPassword(email, password)
@@ -59,4 +103,7 @@ class Login : AppCompatActivity() {
             }
     }
 
-}
+
+    }
+
+

@@ -20,7 +20,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
 
-
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var mAuth:FirebaseAuth
@@ -32,6 +31,10 @@ class MainActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+
+
 
         val bottomNavigationView: BottomNavigationView = binding.bottomNavigationView
         val navController = findNavController(R.id.fragmentContainerView5)
@@ -45,8 +48,14 @@ class MainActivity : AppCompatActivity() {
             )
         )
 
+
+
+
+
         setupActionBarWithNavController(navController, appBarConfiguration)
         bottomNavigationView.setupWithNavController(navController)
+
+
 
 
     }
